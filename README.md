@@ -1,4 +1,4 @@
-# Algoritmo de Ordenção em Tempo Linear
+# Algoritmo de Ordenação em Tempo Linear
 Ordenação em tempo linear: counting sort e extended counting sort.
 
 ![Counting Sort](https://github.com/juliafealves/leda-ordenacao-linear/blob/master/counting_sort.png "Counting Sort")
