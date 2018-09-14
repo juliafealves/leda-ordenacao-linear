@@ -39,7 +39,7 @@ public class StudentSortingTest {
 	private void getImplementation() {
 		// TODO O aluno deve instanciar sua implementação abaixo ao invés de
 		// null
-		this.implementation = null;
+		this.implementation = new CountingSort();
 	}
 
 	public void populaVetorTamanhoPar(Integer[] arrayPadrao) {
@@ -107,18 +107,13 @@ public class StudentSortingTest {
 	 * UMA PARTE DO ARRAY.
 	 */
 
-//	@Test
-//	public void testMaior() {
-//		AbstractSorting<Integer> sorting = new CountingSort();
-//		Assert.assertEquals(31, ((CountingSort) sorting).getMax(this.vetorTamPar, 0 , this.vetorTamPar.length - 1));
-//		Assert.assertEquals(49, ((CountingSort) sorting).getMax(this.vetorTamImpar, 0 , this.vetorTamImpar.length - 1));
-//	}
 
 	@Test
 	public void testCountNumber() {
 		AbstractSorting<Integer> sorting = new CountingSort();
-		Assert.assertEquals(31, ((CountingSort) sorting).getMax(this.vetorTamPar, 0 , this.vetorTamPar.length - 1));
-		Assert.assertEquals(49, ((CountingSort) sorting).getMax(this.vetorTamImpar, 0 , this.vetorTamImpar.length - 1));
+		Integer[] vetor = new Integer[] {3, 1, 4, 1};
+		sorting.sort(vetor);
+		Assert.assertEquals(1, vetor[0], 0);
 	}
 
 }
