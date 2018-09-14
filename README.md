@@ -15,3 +15,6 @@ presente no array a ser ordenado.
 O algoritmo deve satisfazer os seguitnes requisitos: 
 - Alocar o tamanho mínimo possível para o array de contadores (C);
 - Ser capaz de ordenar arrays contendo números negativos.
+
+### Gráfico de Execução dos Algoritmos
+![Gráfico de Execução](https://github.com/juliafealves/leda-ordenacao-linear/blob/master/chart.png "Gráfico de Execução")
