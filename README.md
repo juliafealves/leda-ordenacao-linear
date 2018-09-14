@@ -10,7 +10,7 @@ presente no array a ser ordenado.
 ![Counting Sort](https://github.com/juliafealves/leda-ordenacao-linear/blob/master/counting_sort.png "Counting Sort")
 
 
-## Extended Sorting
+## Extended Couting Sorting
 
 O algoritmo deve satisfazer os seguitnes requisitos: 
 - Alocar o tamanho mínimo possível para o array de contadores (C);
