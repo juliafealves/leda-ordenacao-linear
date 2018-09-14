@@ -1,5 +1,5 @@
 # Algoritmo de Ordenção em Tempo Linear
-Ordenação em tempo linear: counting sort e extended counting sort.
+Ordenação em tempo linear: **Counting Sort** e **Extended Counting Sort**.
 
 ## Counting Sorting
 O algoritmo deve evitar desperdicio de memória alocando o array de contadores com o tamanho sendo o máximo inteiro 
