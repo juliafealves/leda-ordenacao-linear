@@ -1,7 +1,6 @@
 package sorting.linearSorting;
 
 import sorting.AbstractSorting;
-import util.Util;
 
 /**
  * Classe que implementa a estratégia de Counting Sort vista em sala. Procure
@@ -13,16 +12,81 @@ public class CountingSort extends AbstractSorting<Integer> {
     @Override
     public void sort(Integer[] array, int leftIndex, int rightIndex) {
         if (array.length > 0) {
-            int size = Util.getMax(array, leftIndex, rightIndex);
-            int gap = Util.getMin(array, leftIndex, rightIndex);
+            int size = CountingSort.getMax(array, leftIndex, rightIndex);
+            int gap = CountingSort.getMin(array, leftIndex, rightIndex);
 
             if (gap == 0) {
                 size += 1;
             }
 
             Integer[] sum = CountingSort.countNumber(size, gap, array, leftIndex, rightIndex);
-            Util.getCumulativeSum(sum);
+            CountingSort.getCumulativeSum(sum);
             sortPosition(array, leftIndex, rightIndex, gap, sum);
+        }
+    }
+
+    /**
+     * Return the greatest number in Integers' array.
+     *
+     * @author Julia Fernandes
+     *
+     * @param array
+     * @param leftIndex
+     * @param rightIndex
+     * @return
+     */
+    static int getMax(Integer[] array, int leftIndex, int rightIndex) {
+        int max = array[leftIndex];
+
+        for (int i = leftIndex + 1; i <= rightIndex; i++) {
+            if (max < array[i]) {
+                max = array[i];
+            }
+        }
+
+        return max;
+    }
+
+    /**
+     * Return the smallest number in Integers' array.
+     *
+     * @author Julia Fernandes
+     *
+     * @param array
+     * @param leftIndex
+     * @param rightIndex
+     * @return
+     */
+    static int getMin(Integer[] array, int leftIndex, int rightIndex) {
+        int min = array[leftIndex];
+
+        for (int i = leftIndex + 1; i <= rightIndex; i++) {
+            if (min > array[i]) {
+                min = array[i];
+            }
+        }
+
+        return min;
+    }
+
+    /**
+     * Generate an array with a cumulative sum.
+     *
+     * @author Julia Fernandes.
+     *
+     * @param array
+     */
+    static void getCumulativeSum(Integer[] array) {
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] == null) {
+                array[i] = 0;
+            }
+
+            if (array[i - 1] == null) {
+                array[i - 1] = 0;
+            }
+
+            array[i] = array[i] + array[i - 1];
         }
     }
 
